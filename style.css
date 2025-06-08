@@ -1,0 +1,244 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  Roboto    , sans-serif;
+    font-weight: 400;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./img/bg-repeat.jpg");
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+    gap: 4em;
+}
+
+.informativo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    width: 500px;
+    height: 311px;
+    color: #fff;
+}
+
+.informativo h2{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    gap: 1em;
+    width: 690px;
+    height: 705px;
+    background-color: #ffff;
+    padding: 35px;
+    box-shadow: 0 4px 16px rgba(192, 192, 192, 0.15);
+
+}
+
+.campo{
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #000;
+    font-size: 1em;
+    outline: none;
+    
+}
+.campo::placeholder{
+       font-weight: 900;
+}
+
+
+.card .input, .button{
+    width: 100%;
+    border-radius: 8px;
+ 
+}
+
+
+.button{
+    background-color: #3CCC87;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 700;
+    padding: 27px;
+    font-size: 1em;
+    border: none;
+
+}
+
+
+.is-invalid{
+    border: 2px solid red;
+}
+
+.is-valid{
+    border: 2px solid #00C22B;
+}
+
+.obrigatorio{
+    color:red;
+    font-size: 0.8em;
+}
+
+
+@media (max-width: 1024px) and (max-height: 600px) {
+    main {
+        flex-direction: column;
+        padding: 0.2em;
+        gap: 0.2em;
+        height: auto;
+        min-height: 100vh;
+    }
+    .informativo, .card {
+        width: 95%;
+        min-width: unset;
+        padding: 0.5em;
+        margin: 0 auto;
+        height: auto;
+        box-sizing: border-box;
+        font-size: 0.98em;
+    }
+    .campo {
+        padding: 10px;
+        font-size: 0.98em;
+    }
+    .button {
+        padding: 14px;
+        font-size: 1em;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        padding: 2em;
+        gap: 2em;
+        height: auto;
+    }
+    .informativo, .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .card {
+        height: auto;
+    }
+}
+
+
+
+@media (max-width: 800px) {
+    .informativo, .card {
+        width: 100%;
+        min-width: unset;
+        padding: 1em;
+    }
+    .card {
+        padding: 20px;
+    }
+    main {
+        padding: 1em;
+        gap: 1em;
+    }
+}
+
+@media (max-width: 540px) {
+    main {
+        flex-direction: column;
+        padding: 0.5em;
+        gap: 0.5em;
+        height: auto;
+        min-height: 100vh;
+    }
+    .informativo,
+    .card {
+        width: 100%;
+        min-width: unset;
+        padding: 0.5em;
+        margin: 0;
+        height: auto;
+        box-sizing: border-box;
+    }
+    .campo {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+    .button {
+        padding: 12px;
+        font-size: 1em;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .informativo {
+        height: auto;
+        font-size: 0.95em;
+        padding: 0.5em;
+    }
+    .card {
+        height: auto;
+        padding: 10px;
+        font-size: 0.95em;
+    }
+    .campo {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+    .button {
+        padding: 16px;
+        font-size: 1em;
+    }
+    main {
+        padding: 0.5em;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    .informativo {
+        font-size: 0.9em;
+        padding: 0.2em;
+        width: 100%;
+    }
+    .card {
+        padding: 5px;
+        font-size: 0.9em;
+        width: 100%;
+    }
+    .campo {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    .button {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+    main {
+        padding: 0.2em;
+        gap: 0.5em;
+    }
+}
